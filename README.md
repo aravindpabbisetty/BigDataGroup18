@@ -1,5 +1,8 @@
-# BigDataGroup18
+# ITCS 6100 Big Data Analytics for Competitive Advantage
 
+## Deliverable 1:
+
+### Group 18:<br>
 ### Team Members:<br>
 Manasa Avula - 801307493<br>
 Nikhita Sai Boyidapu - 801327682<br>
@@ -26,3 +29,50 @@ To conduct our analysis, we will be using AWS S3 to store the dataset's CSV file
 8) What will be the rate of customers preferring electric bikes in the next 5 years?
 9) What will be the most demandable locations for the next 3 years?
 
+### The full document of deliverable 1 is attached [here](https://github.com/aravindpabbisetty/BigDataGroup18/blob/main/Deliverable-1.pdf).<br>
+
+
+## Deliverable 2:
+
+### AWS Services used:
+● S3: We have used S3 to create a bucket and store csv files of each month and also stored the combined csv file of all months.<br>
+● Sagemaker: We have used the jupyter notebook in sagemaker for the data preparation.<br>
+● QuickSight: We have used quicksight to create a dashboard of the data visualizations.<br>
+
+### Data Understanding:
+
+The chosen dataset consists of 1200000 records and 19 columns. Some of the Important columns include:<br>
+
+ride_id: It is the unique identifier assigned to each ride taken.<br>
+rideable_type: It consists of the type of bike used in the ride.<br>
+start_station_name: It consists of the station name where the ride starts.<br>
+member_casual: It describes the membership of the customer such as casual_member or member.<br>
+
+There are other columns such as started_at_date, started_at_time, ended_at_date, ended_at_time, time_of_ride, end_station_name, start_lat, start_lng, end_lat, end_lng.
+
+To understand the data we have used dataframe functions such as<br>
+head(): To view the first five records<br>
+info(): To view the information about the columns<br>
+describe(): Gives a statistical description of the attributes<br>
+shape(): To find the number of rows and columns in the dataframe.
+
+### Data Preparation: 
+
+Data Preparation is an important task when working with Big Data. To prepare the data we have the jupyter notebook in AWS SageMaker. While performing the data preparation we have done:
+Dropping unnamed columns and checking columns having null values<br>
+Replacing null values with mode value of respective columns and checking is still null values exists<br>
+Dropping the Duplicate rows.<br>
+Adding a new column rideable_type_value that stores the categorical variable (rideable_type) as a numeric value.<br>
+Adding a new column weekday for the started date.
+
+### Exploratory Data Analysis:
+
+We have done exploratory data analysis for our dataset with the help of jupyter notebook provided by AWS SageMaker. We have done various analysis such as finding skew of numeric columns, word cloud for most visited destination, rides taken each day of the week, correlation between longitude, distribution of bike types. This analysis helped us to understand and find patterns within the dataset, outlier detection and identify interesting correlations among the columns.
+
+### Dashboard:
+
+We have created a dashboard that consists of various types of informative and useful visualizations with the help of AWS Quicksight. The dashboard has the following visualizations: Vertical Bar Graph, Horizontal Bar Graph, Pie Chart, Line Chart, Tables and many other.
+
+From the created dashboard we can find insights such as Member customers take rides for a longer period of time, Classic bike is most rented by customers followed by electric and docker bike, Type of Bike preferred in various stations, Ratio of customers returing the bike at each hour, highest ride time and most customer type at each station. The Visualization Dashboard are attached in the document.
+
+### The full document of deliverable 2 is attached [here](https://github.com/aravindpabbisetty/BigDataGroup18/blob/main/Deliverable-2.pdf).
